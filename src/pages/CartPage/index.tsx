@@ -137,7 +137,7 @@ function CartPage() {
           item
         ): item is {
           slug: string;
-          dish: ReturnType<typeof findDishBySlug>['dish'];
+          dish: NonNullable<ReturnType<typeof findDishBySlug>>['dish'];
           quantity: number;
         } => Boolean(item)
       );
